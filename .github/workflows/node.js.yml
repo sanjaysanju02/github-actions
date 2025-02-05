@@ -34,7 +34,7 @@ jobs:
     - name: Run tests
       run: npm test
 
-    - name: Set up Docker Buildx
+    - name: Set up Docker Buildxit
       uses: docker/setup-buildx-action@v2
 
     - name: Log in to Docker Hub
@@ -45,13 +45,13 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t vaishnavi681/my-node-app:latest .
+        docker build -t sanjay7842/my-node-app:latest .
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker push vaishnavi681/my-node-app:latest
+        docker push sanjay7842/my-node-app:latest
 
     - name: Pull Docker image and run container
       run: |
-        docker pull vaishnavi681/my-node-app:latest
-        docker run -d -p 3000:3000 vaishnavi681/my-node-app:latest
+        docker pull sanjay7842/my-node-app:latest
+        docker run -d -p 3000:3000 sanjay7842/my-node-app:latest
